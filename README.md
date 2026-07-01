@@ -160,4 +160,4 @@ cross-actor lexicon は **新 namespace 増設なし** ― substrate boundary �
 - [ADR-2605201400](../../90-docs/adr/2605201400-etzhayyim-kuni-umi-planetary-infra-fleet.md) — robotics class ontology source
 - [ADR-2605192415](../../90-docs/adr/2605192415-etzhayyim-religious-corp-daemon-architecture.md) — 3-tier actor + Murakumo placement pattern
 - [`50-infra/murakumo/fleet.toml`](../../50-infra/murakumo/fleet.toml) — node ↔ cell placement
-- [`40-engine/kotoba/crates/kotoba-kotodama/cells/README.md`](../kotodama/cells/README.md) — sibling cell catalog
+- [`kotoba-lang/kotodama-cells/README.md`](../kotodama/cells/README.md) — sibling cell catalog
