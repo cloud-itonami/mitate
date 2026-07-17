@@ -1,0 +1,21 @@
+{:dependencies
+ [{:dependency/id etzhayyim/root
+   :dependency/repository "https://github.com/etzhayyim/root"
+   :dependency/revision "abdc4ba0a7ba19969b5628f0f867f96f259ca011"
+   :dependency/purpose #{:adr :governance}}
+  {:dependency/id com.etzhayyim/yakushi
+   :dependency/repository "https://github.com/etzhayyim/com-etzhayyim-yakushi"
+   :dependency/revision "5b2389671defc00ef8c7cfa522b9bc96b3ac192f"
+   :dependency/purpose #{:drug-routing :adverse-event-loop}}
+  {:dependency/id com.etzhayyim/kuni-umi
+   :dependency/repository "https://github.com/etzhayyim/com-etzhayyim-kuni-umi"
+   :dependency/revision "7c0b03e0a649eb8a31e51325bfd0a9219351fc37"
+   :dependency/purpose #{:robotics-ontology}}
+  {:dependency/id com.etzhayyim/tsukuru
+   :dependency/repository "https://github.com/etzhayyim/com-etzhayyim-tsukuru"
+   :dependency/revision "e0d8ad057a1e5a62423614d45d70c708edf30d6e"
+   :dependency/purpose #{:review-pattern}}
+  {:dependency/id com.etzhayyim/sdk
+   :dependency/repository "https://github.com/etzhayyim/com-etzhayyim-sdk"
+   :dependency/revision "12314a0cc5ac2feb49dd9789d5c002398acb6988"
+   :dependency/purpose #{:mst :ipfs :anchor}}]}

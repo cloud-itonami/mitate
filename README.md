@@ -75,18 +75,18 @@ Removal of the gate requires:
 ## Lexicon namespace
 
 `com.etzhayyim.mitate.*` — 8 lexicons under
-[`00-contracts/lexicons/com/etzhayyim/mitate/`](../../00-contracts/lexicons/com/etzhayyim/mitate/):
+[`lex/`](../../lex/):
 
 | Lexicon | Phase | Encryption |
 |---|---|---|
-| `rhinitisIntake.json` | patient symptom intake | `encryptedSymptomEnvelope` field XChaCha20-Poly1305 (G2) |
-| `triageVerdict.json` | 5-condition Bayesian classifier output | `encryptedTriageEnvelope` field |
-| `diagnosticOrder.json` | 検査 ordering (IgE / smear / endoscopy / rhinomanometry / CT) | `consentReceiptCid` mandatory |
-| `diagnosticResult.json` | 検査結果 (external lab DICOM 等) | `encryptedResultEnvelope` mandatory |
-| `treatmentPlan.json` | 治療経路 advisory (INN only, brand name 不可 except yakushi-side products) | `disclaimerAccepted` mandatory (G3) |
-| `outcomeFollowup.json` | longitudinal QOL + adherence + AE | yakushi cross-feed leg |
-| `silenMitateReview.json` | Council Lv6+ ≥ 3 multisig attestation (G9 + bias audit) | public (council attestation transparency) |
-| `emergencyEscalation.json` | G5 red-flag detected → ER routing + on-call DID + ack receipt | public ack only (no patient identity) |
+| `lex/rhinitisIntake.edn` | patient symptom intake | `encryptedSymptomEnvelope` field XChaCha20-Poly1305 (G2) |
+| `lex/triageVerdict.edn` | 5-condition Bayesian classifier output | `encryptedTriageEnvelope` field |
+| `lex/diagnosticOrder.edn` | 検査 ordering (IgE / smear / endoscopy / rhinomanometry / CT) | `consentReceiptCid` mandatory |
+| `lex/diagnosticResult.edn` | 検査結果 (external lab DICOM 等) | `encryptedResultEnvelope` mandatory |
+| `lex/treatmentPlan.edn` | 治療経路 advisory (INN only, brand name 不可 except yakushi-side products) | `disclaimerAccepted` mandatory (G3) |
+| `lex/outcomeFollowup.edn` | longitudinal QOL + adherence + AE | yakushi cross-feed leg |
+| `lex/silenMitateReview.edn` | Council Lv6+ ≥ 3 multisig attestation (G9 + bias audit) | public (council attestation transparency) |
+| `lex/emergencyEscalation.edn` | G5 red-flag detected → ER routing + on-call DID + ack receipt | public ack only (no patient identity) |
 
 ## Hard rules (CRITICAL — derived from ADR-2605260100 §Decision 3 G1..G14)
 

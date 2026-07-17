@@ -5,7 +5,7 @@
   substrate — explicitly advisory-only, disclaimer-gated, licensed-MD-in-loop for Rx-tier, and
   the shared emergency-escalation target for the L4 Care lineage (iyashi / kokoro G13). Its 14
   gates are declared in the manifest `constitutionalGates` and encoded structurally as `required`
-  fields across the 9 central AT-Proto lexicons at 00-contracts/lexicons/com/etzhayyim/mitate/.
+  fields across the 9 repository-local canonical EDN lexicons under lex/.
   This suite pins both so a future R1+ cell wave cannot silently drift them:
 
     G1  patient consent revocable + DID-bound (diagnosticConsentReceipt)
@@ -16,25 +16,25 @@
     G9  training/design Council attestation (silenMitateReview)
     privacy — patient is a rotating PSEUDONYM DID, never a stable id/name
 
-  Reads central lexicons via cheshire (string keys). It weakens no gate; it asserts them.
+  Reads repository-local EDN lexicons (string keys). It weakens no gate; it asserts them.
   Touches neither the substrate-wide no-server-key (G7-substrate) nor Murakumo-only (G6-substrate)
   invariants — mitate holds no key; its manifest G12 already pins Murakumo-only inference."
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.set :as set]
             [clojure.string :as str]
-            [cheshire.core :as json]))
+            [clojure.edn :as edn]))
 
 #?(:clj
    (do
      (def ^:private here (.getParentFile (java.io.File. ^String *file*)))      ;; methods/
-     (def ^:private actor-dir (.getParentFile here))                          ;; mitate/
-     (def ^:private root (.getParentFile (.getParentFile actor-dir)))          ;; repo root
+     (def ^:private test-dir (.getParentFile here))
+     (def ^:private root (.getParentFile (.getParentFile test-dir)))
      (def ^:private lexdir
-       (java.io.File. root "00-contracts/lexicons/com/etzhayyim/mitate"))
+       (java.io.File. root "lex"))
      (defn- lex [name]
-       (json/parse-string (slurp (java.io.File. lexdir (str name ".json")))))
+       (edn/read-string (slurp (java.io.File. lexdir (str name ".edn")))))
      (defn- manifest []
-       (json/parse-string (slurp (java.io.File. actor-dir "manifest.jsonld"))))))
+       (:actor/manifest (edn/read-string (slurp (java.io.File. root "manifest.edn")))))))
 
 (defn- record-node [doc]
   (let [main (get-in doc ["defs" "main"])]
