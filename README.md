@@ -72,6 +72,16 @@ Removal of the gate requires:
 3. Licensed MD-in-loop on Council (G4)
 4. R1+ phase ADR landing with explicit `50-infra/murakumo/fleet.toml` activation
 
+## Migration Boundary
+
+`kotoba-lang/kotodama-cells/mitate_*` is legacy source
+during migration. New mitate cell orchestration belongs in
+`src/mitate/murakumo.cljc` as pure `.cljc` actor plans. The plans preserve R0
+scaffold behavior by emitting no write effects until Council, silen-mitate,
+licensed-MD, encrypted-envelope, emergency-routing, and cell-specific baseline
+attestations are supplied. Host placement remains in `kotoba-lang/murakumo`;
+AT Protocol/PDS surfaces remain in `gftdcojp/app-aozora`.
+
 ## Lexicon namespace
 
 `com.etzhayyim.mitate.*` — 8 lexicons under
