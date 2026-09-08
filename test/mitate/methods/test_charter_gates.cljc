@@ -21,7 +21,7 @@
   invariants — mitate holds no key; its manifest G12 already pins Murakumo-only inference."
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.set :as set]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.edn :as edn]))
 
 #?(:clj
