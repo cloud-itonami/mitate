@@ -102,6 +102,6 @@ Quarterly demographic parity measurement for R2+:
 - [ADR-2605231525](../../90-docs/adr/2605231525-no-server-key-invariant.md) (G13 enforcement — physician key custody)
 - [ADR-2605215000](../../90-docs/adr/2605215000-etzhayyim-inference-murakumo-only-no-runpod.md) (G12 — Murakumo only)
 - [ADR-2605250500](../../90-docs/adr/2605250500-yakushi-pharmaceutical-rd-charter.md) (yakushi sibling — drug-side)
-- [`com-etzhayyim-yakushi/CLAUDE.md`](../com-etzhayyim-yakushi/CLAUDE.md) (yakushi sibling rules)
-- [`com-etzhayyim-kuni-umi/CLAUDE.md`](../com-etzhayyim-kuni-umi/CLAUDE.md) (robotics class ontology source)
+- [`com-etzhayyim-yakushi/AGENTS.md`](../com-etzhayyim-yakushi/AGENTS.md) (yakushi sibling rules)
+- [`com-etzhayyim-kuni-umi/AGENTS.md`](../com-etzhayyim-kuni-umi/AGENTS.md) (robotics class ontology source)
 - [`kotoba-lang/kotodama-cells/README.md`](../kotodama/cells/README.md) (sibling cell catalog)
